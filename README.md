@@ -47,7 +47,7 @@ Cada etapa será exibida de forma visual (com setas, animações ou logs explica
 - **Interface:** Responsiva, intuitiva e com foco educacional.
 
 ### ⚙️ Backend
-- **Tecnologia sugerida:** Node.js (com biblioteca `dns` ou `dns2`) ou Python (com biblioteca `dnspython`).  
+- **Tecnologia:** Node.js (com biblioteca `dns` ou `dns2`) ou Python (com biblioteca `dnspython`).  
 - **Função:** Executar as consultas DNS de baixo nível, retornando ao frontend as etapas e resultados obtidos.  
 - **Fluxo:**
   1. Recebe o domínio do frontend via API REST.
