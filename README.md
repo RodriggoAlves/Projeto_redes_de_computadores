@@ -1,2 +1,3 @@
-# Projeto_redes_de_computadores
+# Projeto de Redes de computadores 1 e 2 
+
 Repositório destinado ao Projeto das matérias Redes de computadores 1 | Redes de computadores 2
