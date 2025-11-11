@@ -1,0 +1,163 @@
+/* --- Estilos Globais e Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #12121f; /* Fundo escuro (quase preto) */
+    color: #e0e0e0; /* Texto principal claro */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* --- Container Principal --- */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #1a1a2e; /* Azul-escuro para o container */
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid #33334d;
+}
+
+/* --- Cabeçalho --- */
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px dashed #33334d;
+    padding-bottom: 1.5rem;
+}
+
+header h1 {
+    color: #00d1ff; /* Azul-ciano vibrante */
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #a0a0b0; /* Cinza-azulado claro */
+    font-weight: 300;
+}
+
+/* --- Formulário de Consulta --- */
+.lookup-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#domain-input {
+    flex-grow: 1; /* Ocupa o espaço disponível */
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    background-color: #2a2a4a; /* Fundo do input */
+    border: 2px solid #33334d;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#domain-input:focus {
+    border-color: #00d1ff; /* Destaque ao focar */
+}
+
+#lookup-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #00d1ff; /* Cor de destaque */
+    color: #12121f; /* Texto escuro para contraste */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#lookup-button:hover {
+    background-color: #50e0ff; /* Cor mais clara no hover */
+    transform: translateY(-2px);
+}
+
+/* --- Seção de Resultados --- */
+#results-container h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo de cada passo (como um log) */
+.result-step {
+    background-color: #22223a;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    border-left: 5px solid #4a4aff; /* Borda roxa/azul */
+}
+
+.query {
+    font-weight: 600;
+    color: #f0f0f0;
+    margin-bottom: 0.5rem;
+}
+
+.response {
+    color: #b0b0c0;
+    font-style: italic;
+}
+
+/* Tags de identificação (Cliente, Root, etc) */
+.server-type {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+    background-color: #444;
+    color: #fff;
+}
+
+.server-root { background-color: #ff6347; color: #1a1a2e; } /* Tomate */
+.server-tld { background-color: #ffa500; color: #1a1a2e; } /* Laranja */
+.server-auth { background-color: #32cd32; color: #1a1a2e; } /* Verde-limão */
+
+/* Flecha de fluxo entre os passos */
+.flow-arrow {
+    font-size: 1.5rem;
+    color: #00d1ff;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+/* --- Bloco de Resultado Final --- */
+.final-result {
+    background: #00d1ff;
+    color: #12121f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.final-result h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.final-result p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
