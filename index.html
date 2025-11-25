@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resolução DNS</title>
+    <title>Visualizador de Resolução DNS</title>
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,63 +12,33 @@
     <div class="container">
         <header>
             <h1>🛰️ Visualizador de Resolução DNS</h1>
-            <p>Veja o que acontece "por baixo dos panos" quando um domínio é resolvido.</p>
+            <p>Simulação de consulta de rede via API Google DoH</p>
         </header>
 
         <main>
             <div class="lookup-form">
                 <input type="text" id="domain-input" placeholder="Digite um domínio (ex: google.com)">
-                <button id="lookup-button">Resolver</button>
+                <button id="lookup-button">Resolver DNS</button>
             </div>
 
             <div id="results-container">
-                <h2>Processo da Consulta:</h2>
-                
-                <div class="result-step">
-                    <div class="query">
-                        <span class="server-type">[CLIENTE]</span>
-                        Iniciando consulta recursiva para: <strong>google.com</strong>
-                    </div>
-                    <div class="response">
-                        <span class="server-type server-root">[ROOT]</span>
-                        Consulta ao Servidor Raiz (.)... Resposta: Servidor TLD (.com)
-                    </div>
+                <div class="initial-state">
+                    <h2>Aguardando consulta...</h2>
+                    <p>Digite um site acima para iniciar o rastreamento do IP.</p>
                 </div>
-
-                <div class="flow-arrow">▼</div>
-
-                <div class="result-step">
-                    <div class="query">
-                        <span class="server-type">[CLIENTE]</span>
-                        Consultando Servidor TLD (.com)...
-                    </div>
-                    <div class="response">
-                        <span class="server-type server-tld">[TLD]</span>
-                        Resposta: Servidor Autoritativo (google.com)
-                    </div>
-                </div>
-                
-                <div class="flow-arrow">▼</div>
-                
-                <div class="result-step">
-                    <div class="query">
-                        <span class="server-type">[CLIENTE]</span>
-                        Consultando Servidor Autoritativo (google.com)...
-                    </div>
-                    <div class="response">
-                        <span class="server-type server-auth">[AUTH]</span>
-                        Resposta: Registro A = <strong>142.250.218.142</strong>
-                    </div>
-                </div>
-
-                <div class="final-result">
-                    <h3>Resolvido!</h3>
-                    <p><strong>google.com</strong> ➔ <strong>142.250.218.142</strong></p>
-                </div>
-
             </div>
+            
+            <div id="browser-output-container">
+                <div class="browser-bar-simulation">
+                    <span class="lock-icon">❓</span>
+                    <a id="ip-link-output" class="placeholder" href="#">Endereço IP / Domínio Resolvido</a>
+                    <span class="refresh-icon" style="visibility:hidden;">🔄</span>
+                </div>
+            </div>
+
         </main>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
