@@ -56,6 +56,10 @@ Cada etapa será exibida de forma visual (com setas, animações ou logs explica
 
 ---
 
+### ⚙️ Link para acesso
+
+https://projeto-redes-de-computadores.vercel.app/
+
 ## 📡 Fluxo de Operação (Resumo)
 1. Usuário digita um domínio → `frontend`.
 2. Frontend envia a requisição ao backend.
